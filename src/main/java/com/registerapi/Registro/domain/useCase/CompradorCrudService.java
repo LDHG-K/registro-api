@@ -1,14 +1,22 @@
 package com.registerapi.Registro.domain.useCase;
 
 import com.registerapi.Registro.domain.model.Comprador;
+import com.registerapi.Registro.domain.useCase.Repository.CompradorRepository;
 import com.registerapi.Registro.domain.useCase.gateways.ICompradorCrudService;
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
-
+@Service
+@AllArgsConstructor
 public class CompradorCrudService implements ICompradorCrudService {
+
+    private final CompradorRepository cr;
+
     @Override
     public Mono<Comprador> crearComprador(Mono<Comprador> comprador) {
-        return null;
+        System.out.println("Servicio");
+        return cr.guardar(comprador);
     }
 
     @Override

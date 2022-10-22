@@ -2,8 +2,9 @@ package com.registerapi.Registro.infraestructure.driverAdapter.ReactiveRepositor
 
 import com.registerapi.Registro.domain.model.Comprador;
 import com.registerapi.Registro.domain.useCase.Repository.CompradorRepository;
-import com.registerapi.Registro.domain.useCase.gateways.ICompradorCrudService;
-import com.registerapi.Registro.infraestructure.driverAdapter.ReactiveRepository.repository.CompradorMongoRepository;
+import com.registerapi.Registro.infraestructure.driverAdapter.ReactiveRepository.collections.CompradorCollection;
+import com.registerapi.Registro.infraestructure.driverAdapter.ReactiveRepository.mapper.CompradorMapper;
+import com.registerapi.Registro.infraestructure.driverAdapter.ReactiveRepository.repository.CompradorMongoRepositoryE;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
@@ -12,25 +13,28 @@ import reactor.core.publisher.Mono;
 @AllArgsConstructor
 public class CompradorRepositoryImp implements CompradorRepository {
 
-    private final CompradorMongoRepository cs;
+    private final CompradorMongoRepositoryE cs;
+    private final CompradorMapper cm;
 
     @Override
     public Mono<Comprador> guardar(Mono<Comprador> compradorMono) {
-        return null;
+        System.out.println("Repositorio");
+        return compradorMono.map(c -> cm.compradorToCompradorC(c))
+                .flatMap(cs::save)
+                .map(e -> cm.compradorCToComprador(e));
     }
 
     @Override
-    public Mono<Comprador> editar(Mono<Comprador> compradorMono) {
-        return null;
+    public Mono<Comprador> editar(Mono<CompradorCollection> compradorMono) {
+      return compradorMono.flatMap(cs::save).map(e->cm.compradorCToComprador(e));
     }
 
     @Override
-    public Mono<Comprador> buscarPorClave(String id) {
-        return null;
+    public Mono<Comprador> buscarPorClave(Long id) {
+        return cs.findById(id).map(e->cm.compradorCToComprador(e));
     }
 
     @Override
-    public Mono<Comprador> eliminar(Long id) {
-        return null;
-    }
+    public Mono<Void> eliminar(Long id) {
+        return cs.deleteById(id);    }
 }

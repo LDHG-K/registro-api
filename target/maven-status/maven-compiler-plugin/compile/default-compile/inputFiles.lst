@@ -1,0 +1,17 @@
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\model\Producto.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\model\Comprador.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\useCase\DetalleFacturaCrudService.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\infraestructure\entryPoints\ProductoController.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\useCase\gateways\IFacturaCrudService.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\useCase\gateways\IDetallefacturaCrudService.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\useCase\FacturaCrudService.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\infraestructure\repository\CompradorMongoRepository.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\useCase\CompradorCrudService.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\useCase\gateways\ICompradorCrudService.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\infraestructure\entryPoints\FacturaController.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\model\Factura.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\useCase\gateways\IProductoCrudService.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\useCase\ProductoCrudService.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\domain\model\DetalleFactura.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\RegistroApplication.java
+C:\Users\Admin\Desktop\Proyectos\Proyecto Reactivo\registro-api\src\main\java\com\registerapi\Registro\infraestructure\entryPoints\CompradorController.java
