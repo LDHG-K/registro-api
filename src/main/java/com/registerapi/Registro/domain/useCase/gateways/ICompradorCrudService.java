@@ -11,7 +11,7 @@ public interface ICompradorCrudService {
 
     Mono<Comprador> obtenerComprador();
 
-    Flux<Comprador> listarPorPalabraClave(String clave);
+    Mono<Comprador> buscarPorPalabraClave(String clave);
 
     Mono<Comprador> editarComprador(Mono<Comprador> comprador);
 

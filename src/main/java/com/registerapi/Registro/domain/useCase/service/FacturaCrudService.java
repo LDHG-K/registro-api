@@ -1,4 +1,4 @@
-package com.registerapi.Registro.domain.useCase;
+package com.registerapi.Registro.domain.useCase.service;
 
 import com.registerapi.Registro.domain.model.Factura;
 import com.registerapi.Registro.domain.useCase.gateways.IFacturaCrudService;

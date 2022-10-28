@@ -14,17 +14,15 @@ import java.util.Calendar;
 public class CompradorCollection {
 
     @Id
-    private Long id;
-
-    @Indexed(unique = true)
     private String documento;
     private String tipoDocumento;
+
     private String nombres;
     private String apellidos;
 
     @Indexed(unique = true)
     private String mail;
-    private Calendar fechaRegistro;
-    private Calendar fechaNacimiento;
+    private String fechaRegistro;
+    private String fechaNacimiento;
 
 }

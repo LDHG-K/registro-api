@@ -11,7 +11,6 @@ public class CompradorMapper {
 
     public Comprador compradorCToComprador(CompradorCollection cc){
         return Comprador.builder()
-                .id(cc.getId())
                 .documento(cc.getDocumento())
                 .apellidos(cc.getApellidos())
                 .fechaNacimiento(cc.getFechaNacimiento())
@@ -26,7 +25,7 @@ public class CompradorMapper {
 
     public CompradorCollection compradorToCompradorC(Comprador c){
         return CompradorCollection.builder()
-                .id(c.getId())
+
                 .apellidos(c.getApellidos())
                 .documento(c.getDocumento())
                 .fechaNacimiento(c.getFechaNacimiento())

@@ -3,5 +3,5 @@ import com.registerapi.Registro.infraestructure.driverAdapter.ReactiveRepository
 import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 
 
-public interface CompradorMongoRepositoryE extends ReactiveMongoRepository<CompradorCollection,Long>{
+public interface CompradorMongoRepositoryE extends ReactiveMongoRepository<CompradorCollection,String>{
 }

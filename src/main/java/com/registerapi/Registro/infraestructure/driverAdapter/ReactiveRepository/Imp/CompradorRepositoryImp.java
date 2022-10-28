@@ -7,6 +7,7 @@ import com.registerapi.Registro.infraestructure.driverAdapter.ReactiveRepository
 import com.registerapi.Registro.infraestructure.driverAdapter.ReactiveRepository.repository.CompradorMongoRepositoryE;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
+import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 @Service
@@ -18,7 +19,6 @@ public class CompradorRepositoryImp implements CompradorRepository {
 
     @Override
     public Mono<Comprador> guardar(Mono<Comprador> compradorMono) {
-        System.out.println("Repositorio");
         return compradorMono.map(c -> cm.compradorToCompradorC(c))
                 .flatMap(cs::save)
                 .map(e -> cm.compradorCToComprador(e));
@@ -30,11 +30,16 @@ public class CompradorRepositoryImp implements CompradorRepository {
     }
 
     @Override
-    public Mono<Comprador> buscarPorClave(Long id) {
+    public Mono<Comprador> buscarPorClave(String id) {
         return cs.findById(id).map(e->cm.compradorCToComprador(e));
     }
 
     @Override
-    public Mono<Void> eliminar(Long id) {
+    public Mono<Void> eliminar(String id) {
         return cs.deleteById(id);    }
+
+    @Override
+    public Mono<Boolean> existePorClave(String id) {
+        return cs.existsById(id);
+    }
 }
